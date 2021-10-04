@@ -32,11 +32,11 @@ def evaluate_sequence(lst):
     return win_prob
 
 
-Switches = [D, G, E, F, K, A, H, I_, J, A, C, B]
+Switches = [A, B, C, D, E, F, G, H, I_, J, K, L]
 
 max_prob = 0
 best_perm = None
-# This might take 5-10 min
+# This might take 5-10 min, we are searching 479'000'000 permutations!
 for perm in itertools.permutations(Switches):
     _win_prob = evaluate_sequence(perm)
     if _win_prob > max_prob:
